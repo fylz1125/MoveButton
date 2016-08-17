@@ -614,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoveButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fuzheng.MoveButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoveButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fuzheng.MoveButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -696,6 +698,7 @@
 				C81C1E1B1CF6D318007D1B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C81C1E1C1CF6D318007D1B97 /* Build configuration list for PBXNativeTarget "MoveButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +707,7 @@
 				C81C1E1E1CF6D318007D1B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C81C1E1F1CF6D318007D1B97 /* Build configuration list for PBXNativeTarget "MoveButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +716,7 @@
 				C81C1E211CF6D318007D1B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
