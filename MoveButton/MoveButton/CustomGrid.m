@@ -28,8 +28,6 @@
    highlightedImage:(UIImage *)highlightedImage
              gridId:(NSInteger)gridId
             atIndex:(NSInteger)index
-        isAddDelete:(BOOL)isAddDelete
-         deleteIcon:(UIImage *)deleteIcon
       withIconImage:(NSString *)imageString
 {
     self = [super initWithFrame:frame];
@@ -64,26 +62,7 @@
         [self setGridId:gridId];
         [self setGridIndex:index];
         [self setGridCenterPoint:self.center];
-        
-        //判断是否要添加删除图标
-        if (isAddDelete) {
-            //当长按时添加删除按钮图标
-            UIButton *deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [deleteBtn setFrame:CGRectMake(self.frame.size.width-30, 10, 20, 20)];
-            [deleteBtn setBackgroundColor:[UIColor clearColor]];
-            [deleteBtn setBackgroundImage:deleteIcon forState:UIControlStateNormal];
-            [deleteBtn addTarget:self action:@selector(deleteGrid:) forControlEvents:UIControlEventTouchUpInside];
-            [deleteBtn setHidden:YES];
-            
-            /////////////
-            [deleteBtn setTag:gridId];
-            [self addSubview:deleteBtn];
-            
-            //添加长按手势
-            UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(gridLongPress:)];
-            [self addGestureRecognizer:longPressGesture];
-             longPressGesture = nil;
-        }
+
     }
     return self;
 }
@@ -95,37 +74,7 @@
     [self.delegate gridItemDidClicked:clickItem];
 }
 
-//响应格子删除事件
-- (void)deleteGrid:(UIButton *)deleteButton
-{
-    [self.delegate gridItemDidDeleteClicked:deleteButton];
-}
 
-//响应格子的长安手势事件
-- (void)gridLongPress:(UILongPressGestureRecognizer *)longPressGesture
-{
-    switch (longPressGesture.state) {
-        case UIGestureRecognizerStateBegan:
-        {
-            [self.delegate pressGestureStateBegan:longPressGesture withGridItem:self];
-            break;
-        }
-        case UIGestureRecognizerStateChanged:
-        {
-            //应用移动后的新坐标
-            CGPoint newPoint = [longPressGesture locationInView:longPressGesture.view];
-            [self.delegate pressGestureStateChangedWithPoint:newPoint gridItem:self];
-            break;
-        }
-        case UIGestureRecognizerStateEnded:
-        {
-            [self.delegate pressGestureStateEnded:self];
-            break;
-        }
-        default:
-            break;
-    }
-}
 
 //根据格子的坐标计算格子的索引位置
 + (NSInteger)indexOfPoint:(CGPoint)point

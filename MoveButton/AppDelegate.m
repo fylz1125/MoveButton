@@ -42,69 +42,59 @@
 
 -(void)createData
 {
-    // 如果数组有改变
-    NSArray * titleArray = [[NSArray alloc]init];
-    NSArray * imageArray = [[NSArray alloc]init];
-    NSArray * idArray = [[NSArray alloc]init];
-    titleArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"title"];
-    imageArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"image"];
-    idArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"gridID"];
-    NSLog(@"array = %@",titleArray);
+//    // 如果数组有改变
+//    NSArray * titleArray = [[NSArray alloc]init];
+//    NSArray * imageArray = [[NSArray alloc]init];
+//    NSArray * idArray = [[NSArray alloc]init];
+//    titleArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"title"];
+//    imageArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"image"];
+//    idArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"gridID"];
+//    NSLog(@"array = %@",titleArray);
     
-    NSArray * moretitleArray = [[NSArray alloc]init];
-    NSArray * moreimageArray = [[NSArray alloc]init];
-    NSArray * moreidArray = [[NSArray alloc]init];
-    moretitleArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"moretitle"];
-    moreimageArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"moreimage"];
-    moreidArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"moregridID"];
     
     // Home按钮数组 体验账号
     [PTSingletonManager shareInstance].showGridArray = [[NSMutableArray alloc]initWithCapacity:12];
     [PTSingletonManager shareInstance].showImageGridArray = [[NSMutableArray alloc]initWithCapacity:12];
     
-    [PTSingletonManager shareInstance].showGridArray = [NSMutableArray arrayWithObjects:@"收银台",@"结算",@"分享", @"T+0", @"中心",@"D+1", @"商店",@"P2P", @"开通", @"充值", @"转账", @"扫码", @"记录" , @"快捷支付", @"明细", @"收款",@"更多", nil];
+    [PTSingletonManager shareInstance].showGridArray = [NSMutableArray arrayWithObjects:@"收银台",@"结算",@"分享", @"商店",@"P2P", @"开通", @"充值", @"转账", @"扫码", nil];
     
     [PTSingletonManager shareInstance].showImageGridArray =
     [NSMutableArray arrayWithObjects:
      @"more_icon_Transaction_flow",@"more_icon_cancle_deal", @"more_icon_Search",
-     @"more_icon_t0",@"more_icon_shouyin" ,@"more_icon_d1",
      @"more_icon_Settlement",@"more_icon_Mall", @"more_icon_gift",
-     @"more_icon_licai",@"more_icon_-transfer",@"more_icon_Recharge" ,
-     @"more_icon_Transfer-" , @"more_icon_Credit-card-",@"more_icon_Manager",@"work-order",@"add_businesses", nil];
+     @"more_icon_licai",@"more_icon_-transfer",@"more_icon_Recharge" ,nil];
     
     [PTSingletonManager shareInstance].showGridIDArray =
     [NSMutableArray arrayWithObjects:
      @"1000",@"1001", @"1002",
-     @"1003",@"1004",@"1005" ,@"1006",
-     @"1007",@"1008", @"1009",
-     @"1010",@"1011",@"1012" ,
-     @"1013" , @"1014",@"1015",@"0", nil];
+     @"1003",@"1004",@"1005",
+     @"1006",@"1007",@"1008", nil];
     
-    // 对比数组
-    NSMutableString * defaString = [[NSMutableString alloc]init];
-    NSMutableString * localString = [[NSMutableString alloc]init];
+//    // 对比数组
+//    NSMutableString * defaString = [[NSMutableString alloc]init];
+//    NSMutableString * localString = [[NSMutableString alloc]init];
+//    
+//    // 默认
+//    for (int i = 0; i< [PTSingletonManager shareInstance].showGridArray.count; i++) {
+//        [defaString appendString:[PTSingletonManager shareInstance].showGridArray[i]];
+//        //        NSLog(@"defaString = %@",defaString);
+//    }
+//    // 本地
+//    for (int i = 0; i< titleArray.count; i++) {
+//        [localString appendString:titleArray[i]];
+//        //        NSLog(@"localString = %@",localString);
+//    }
     
-    // 默认
-    for (int i = 0; i< [PTSingletonManager shareInstance].showGridArray.count; i++) {
-        [defaString appendString:[PTSingletonManager shareInstance].showGridArray[i]];
-        //        NSLog(@"defaString = %@",defaString);
-    }
-    // 本地
-    for (int i = 0; i< titleArray.count; i++) {
-        [localString appendString:titleArray[i]];
-        //        NSLog(@"localString = %@",localString);
-    }
-    
-    // 如果本地数组有改变
-    if (![localString isEqualToString:defaString] && localString.length>2) {
-        [PTSingletonManager shareInstance].showGridArray = [[NSMutableArray alloc]initWithArray:titleArray];
-        [PTSingletonManager shareInstance].showImageGridArray = [[NSMutableArray alloc]initWithArray:imageArray];
-        [PTSingletonManager shareInstance].showGridIDArray = [[NSMutableArray alloc]initWithArray:idArray];
-        
-        [PTSingletonManager shareInstance].moreshowGridArray = [[NSMutableArray alloc]initWithArray:moretitleArray];
-        [PTSingletonManager shareInstance].moreshowImageGridArray = [[NSMutableArray alloc]initWithArray:moreimageArray];
-        [PTSingletonManager shareInstance].moreshowGridIDArray = [[NSMutableArray alloc]initWithArray:moreidArray];
-    }
+//    // 如果本地数组有改变
+//    if (![localString isEqualToString:defaString] && localString.length>2) {
+//        [PTSingletonManager shareInstance].showGridArray = [[NSMutableArray alloc]initWithArray:titleArray];
+//        [PTSingletonManager shareInstance].showImageGridArray = [[NSMutableArray alloc]initWithArray:imageArray];
+//        [PTSingletonManager shareInstance].showGridIDArray = [[NSMutableArray alloc]initWithArray:idArray];
+//        
+//        [PTSingletonManager shareInstance].moreshowGridArray = [[NSMutableArray alloc]initWithArray:moretitleArray];
+//        [PTSingletonManager shareInstance].moreshowImageGridArray = [[NSMutableArray alloc]initWithArray:moreimageArray];
+//        [PTSingletonManager shareInstance].moreshowGridIDArray = [[NSMutableArray alloc]initWithArray:moreidArray];
+//    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

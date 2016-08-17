@@ -21,7 +21,6 @@
 		C81C1E2C1CF6D339007D1B97 /* app_item_pressed_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C81C1E261CF6D339007D1B97 /* app_item_pressed_bg.png */; };
 		C81C1E2D1CF6D339007D1B97 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C1E281CF6D339007D1B97 /* CustomGrid.m */; };
 		C81C1E331CF6D526007D1B97 /* PTSingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C1E321CF6D526007D1B97 /* PTSingletonManager.m */; };
-		C81C1E361CF6D5EB007D1B97 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C1E351CF6D5EB007D1B97 /* MoreViewController.m */; };
 		C81C1E5D1CF6D9DF007D1B97 /* add_businesses.png in Resources */ = {isa = PBXBuildFile; fileRef = C81C1E381CF6D9DF007D1B97 /* add_businesses.png */; };
 		C81C1E5E1CF6D9DF007D1B97 /* more_icon_-transfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81C1E391CF6D9DF007D1B97 /* more_icon_-transfer@2x.png */; };
 		C81C1E5F1CF6D9DF007D1B97 /* more_icon_-transfer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81C1E3A1CF6D9DF007D1B97 /* more_icon_-transfer@3x.png */; };
@@ -103,8 +102,6 @@
 		C81C1E281CF6D339007D1B97 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGrid.m; sourceTree = "<group>"; };
 		C81C1E311CF6D526007D1B97 /* PTSingletonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTSingletonManager.h; sourceTree = "<group>"; };
 		C81C1E321CF6D526007D1B97 /* PTSingletonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTSingletonManager.m; sourceTree = "<group>"; };
-		C81C1E341CF6D5EB007D1B97 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		C81C1E351CF6D5EB007D1B97 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		C81C1E381CF6D9DF007D1B97 /* add_businesses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_businesses.png; sourceTree = "<group>"; };
 		C81C1E391CF6D9DF007D1B97 /* more_icon_-transfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_icon_-transfer@2x.png"; sourceTree = "<group>"; };
 		C81C1E3A1CF6D9DF007D1B97 /* more_icon_-transfer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_icon_-transfer@3x.png"; sourceTree = "<group>"; };
@@ -200,8 +197,6 @@
 				C81C1E321CF6D526007D1B97 /* PTSingletonManager.m */,
 				C81C1DF51CF6D317007D1B97 /* ViewController.h */,
 				C81C1DF61CF6D317007D1B97 /* ViewController.m */,
-				C81C1E341CF6D5EB007D1B97 /* MoreViewController.h */,
-				C81C1E351CF6D5EB007D1B97 /* MoreViewController.m */,
 				C81C1DF81CF6D317007D1B97 /* Main.storyboard */,
 				C81C1DFB1CF6D317007D1B97 /* Assets.xcassets */,
 				C81C1DFD1CF6D317007D1B97 /* LaunchScreen.storyboard */,
@@ -466,7 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C81C1E2D1CF6D339007D1B97 /* CustomGrid.m in Sources */,
-				C81C1E361CF6D5EB007D1B97 /* MoreViewController.m in Sources */,
 				C81C1E331CF6D526007D1B97 /* PTSingletonManager.m in Sources */,
 				C81C1DF71CF6D317007D1B97 /* ViewController.m in Sources */,
 				C81C1DF41CF6D317007D1B97 /* AppDelegate.m in Sources */,
